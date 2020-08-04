@@ -1,0 +1,18 @@
+"""
+You are given an immutable string, and you want to make changes to it.
+input:
+he first line contains a string, .
+The next line contains an integer , denoting the index location and a character  separated by a space.
+output:
+Using any of the methods explained above, replace the character at index  with character .
+"""
+#hackerrank
+def mutate_string(string, position, character):
+    output=string[:position]+character+string[position+1:]
+    return output
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
